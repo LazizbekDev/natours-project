@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #777;
+    padding: 30px;
+}
+
+.header {
+    height: 95vh;
+    background-image: linear-gradient(
+        to right bottom,
+        #7ed56fd7,
+        #28b485d0),
+    url(../img/hero-small.jpg);
+    background-size: cover;
+    background-position: top;
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0% 100%);
+}
+
+.logo-box {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}
+
+.logo-box .logo {
+    height: 35px;
+}
+
+.text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.heading-primary {
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.heading-main {
+    display: block;
+    letter-spacing: 36px;
+    font-weight: 400;
+    font-size: 60px;
+}
+
+.heading-sub {
+    font-weight: 700;
+    font-size: 20px;
+    display: block;
+    letter-spacing: 17.4px;
+}
+
+::selection {
+    background-color: #55C57A;
+    color: #fff;
+}
