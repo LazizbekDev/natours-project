@@ -1,0 +1,23 @@
+{
+  "name": "natours",
+  "version": "1.0.0",
+  "description": "!['review'](/img/screenshot.png)",
+  "main": "index.js",
+  "scripts": {
+    "start": "node-sass sass/master.scss css/style.css -w -o"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LazizbekDev/natours-project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LazizbekDev/natours-project/issues"
+  },
+  "homepage": "https://github.com/LazizbekDev/natours-project#readme",
+  "devDependencies": {
+    "node-sass": "^7.0.1"
+  }
+}

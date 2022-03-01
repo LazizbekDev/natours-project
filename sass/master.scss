@@ -1,0 +1,18 @@
+@import "abstaracts/variables";
+@import "base/base";
+@import "base/utilities";
+@import "pages/home";
+
+@import "layouts/header";
+@import "layouts/grid";
+
+@import "components/button";
+@import "components/composition";
+
+@import "base/animations";
+@import "base/typograpty";
+
+::selection {
+    background-color: $dark-green;
+    color: $light-white;
+}

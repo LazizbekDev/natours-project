@@ -1,0 +1,18 @@
+.row {
+    max-width: $grid-width;
+    background-color: $black;
+    margin: 0 auto;
+    
+    &:not(:last-child) {
+        margin-bottom: $grid-bottom;
+    }
+
+    .col-1-of-2 {
+        float: left;
+        width: calc((100% - 6rem) / 2);
+
+        &:not(:last-child) {
+            margin-right: 6rem;
+        }
+    }
+}
