@@ -41,3 +41,18 @@
         transform: translate(0);
     }
 }
+
+@keyframes popupBox {
+    0% {
+        transform: scale(1.03) rotate(4deg);
+    }
+    50% {
+        transform: scale(1.1) rotate(4deg);
+    }
+    70% {
+        transform: scale(1.2) rotate(-3deg);
+    }
+    100% {
+        transform: scale(1.08) rotate(1deg);
+    }
+}

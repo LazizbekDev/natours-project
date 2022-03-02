@@ -39,6 +39,7 @@
     background-clip: text;
     -webkit-text-fill-color: transparent;
     transition: .2s;
+    cursor: pointer;
 
     &:hover {
         transform: skew(15deg, 2deg) scale(1.1);

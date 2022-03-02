@@ -1,18 +1,23 @@
 .row {
     max-width: $grid-width;
-    background-color: $black;
     margin: 0 auto;
     
     &:not(:last-child) {
         margin-bottom: $grid-bottom;
     }
 
-    .col-1-of-2 {
+    [class^="col-"] {
         float: left;
-        width: calc((100% - 6rem) / 2);
-
+        
         &:not(:last-child) {
             margin-right: 6rem;
         }
+    }
+
+    .col-1-of-2 {width: calc((100% - 6rem) / 2);}
+    .col-1-of-3 {width: calc((100% - 2 * 6rem) / 3);}
+
+    .col {
+        display: flex !important;
     }
 }

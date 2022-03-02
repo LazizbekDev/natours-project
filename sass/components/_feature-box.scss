@@ -1,0 +1,35 @@
+.feature-box {
+    background-color: rgba($light-white, .6) !important;
+    font-size: 1.5rem;
+    padding: 2.5rem;
+    text-align: center;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba($color: #000000, $alpha: .4);
+    margin: 0 2rem;
+    cursor: pointer;
+
+    .icon {
+        font-size: 4rem;
+        color: $medium-green;
+    }
+
+    .title {
+        text-transform: uppercase;
+        margin: 1.6rem auto;
+        // color: $black;
+        font-size: 1.4rem;
+    }
+
+    .descr {
+        font-size: 1.4rem;
+        line-height: 2.2rem;
+    }
+
+    &:hover {
+        animation-name: popupBox;
+        animation-duration: .3s;
+        animation-timing-function: linear;
+        animation-iteration-count: 1;
+        transform: scale(1.04);
+    }
+}

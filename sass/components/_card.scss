@@ -1,0 +1,133 @@
+.card {
+    perspective: 150rem;
+    position: relative;
+    height: 45rem;
+    // color: #fff;
+
+    &__side {
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        width: 30rem;
+        height: 45rem;
+        border-radius: 3px;
+        text-align: center;
+        overflow: hidden;
+        position: absolute;
+        transition: all .8s;
+        backface-visibility: hidden;
+        box-shadow: 0 1.5rem 4rem rgba($black, .15);
+
+        &--front {
+            background: white;
+        }
+
+        &--back {
+            transform: rotateY(180deg);
+
+            &-1 {
+                background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
+            }
+            &-2 {
+                background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+            }
+            &-3 {
+                background-image: linear-gradient(to right bottom, $light-green, $dark-green);
+            }
+        }
+    }
+
+    &:hover &__side--front {
+        transform: rotateY(-180deg) ;
+    }
+    &:hover &__side--back {
+        transform: rotateY(0);
+    }
+
+    &__pic {
+        background-size: cover;
+        height: 23rem;
+        clip-path: polygon(0% 0%, 0% 100%, 100% 82%, 100% 0%);
+
+        &--1 {
+            background-image: linear-gradient(to right bottom, rgba($color-secondary-light, .2), rgba($color-secondary-dark, .4)), url('../../img/about02.png');
+        }
+        &--2 {
+            background-image: url('../../img/about04.png');
+            background-image: linear-gradient(to right bottom, rgba($color-primary-light, .6), rgba($color-primary-dark, .4)), url('../../img/about04.png');
+        }
+        &--3 {
+            background-image: linear-gradient(to right bottom, rgba($light-green, .9), rgba($dark-green, .4)), url('../../img/about03.png');
+        }
+    }
+
+    &__heading {
+        font-size: 2.8rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        color: white;
+        position: absolute;
+        top: 12rem;
+        right: 2rem;
+        text-align: right;
+        width: 75%;
+
+        &--span {
+            padding: 1rem 1.5rem;
+            -webkit-box-decoration-break: clone;
+            box-decoration-break: clone;
+            &-1{
+                background-image: linear-gradient(to right bottom, rgba($color-secondary-light, .8), rgba($color-secondary-dark, .9));
+            }
+            &-2{
+                background-image: linear-gradient(to right bottom, rgba($color-primary-light, .9), rgba($color-primary-dark, .8));
+            }
+            &-3{
+                background-image: linear-gradient(to right bottom, rgba($light-green, .9), rgba($dark-green, .8));
+            }
+        }
+    }
+
+    &__description {
+        padding: 3rem;
+        ul {
+            width: 80%;
+            list-style: none;
+            margin: -2rem auto 0;
+
+            li {
+                text-align: center;
+                font-size: 1.2rem;
+                padding: 1rem;
+                text-transform: capitalize;
+
+                &:not(:last-child) {
+                    border-bottom: 1px solid $color-gray-light-2;
+                }
+            }
+        }
+    }
+
+    &__info {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 90%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__price--box {
+        text-align: center;
+        color: $light-white;
+        margin-bottom: 8rem;
+    }
+
+    &__price--title {
+        font-size: 1.4rem;
+        text-transform: uppercase;
+    }
+    &__price__value {
+        font-size: 6rem;
+        font-weight: 100;
+    }
+}
