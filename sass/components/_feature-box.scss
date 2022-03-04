@@ -13,18 +13,6 @@
         color: $medium-green;
     }
 
-    .title {
-        text-transform: uppercase;
-        margin: 1.6rem auto;
-        // color: $black;
-        font-size: 1.4rem;
-    }
-
-    .descr {
-        font-size: 1.4rem;
-        line-height: 2.2rem;
-    }
-
     &:hover {
         animation-name: popupBox;
         animation-duration: .3s;
@@ -32,4 +20,16 @@
         animation-iteration-count: 1;
         transform: scale(1.04);
     }
+}
+
+.title {
+    text-transform: uppercase;
+    margin: 1.6rem auto;
+    // color: $black;
+    font-size: 1.4rem;
+}
+
+.descr {
+    font-size: 1.4rem;
+    line-height: 2.2rem;
 }
