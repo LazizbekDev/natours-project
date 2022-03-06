@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="LazizbekDev, Lazizbek, Laziz, natours">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
     <link rel="shortcut icon" href="img/logo-green-1x.png" type="image/x-icon">
     <link rel="stylesheet" href="./css/style.css">
@@ -13,6 +16,26 @@
 </head>
 
 <body>
+    <div class="navigation">
+        <input type="checkbox" name="" id="navi__toggle" class="navigation__checkbox">
+
+        <label for="navi__toggle" class="navigation__btn">
+            <i class="fa-solid fa-bars"></i>
+        </label>
+
+        <div class="navigation__background">&nbsp;</div>
+
+        <nav class="navigation__navbar">
+            <ul class="navigation__list">
+                <li class="navigation__item"><a class="navigation__link" href="#">Home</a></li>
+                <li class="navigation__item"><a class="navigation__link" href="#">about</a></li>
+                <li class="navigation__item"><a class="navigation__link" href="#">storyes</a></li>
+                <li class="navigation__item"><a class="navigation__link" href="#">Works</a></li>
+                <li class="navigation__item"><a class="navigation__link" href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
     <header class="header">
         <div class="header__logo-box">
             <img src="./img/logo-white.png" alt="lazizbekdev" class="header__logo">
@@ -197,7 +220,7 @@
         </section>
 
         <section class="section-stories">
-            
+
             <div class="bg__video">
                 <video loop muted autoplay class="bg__video--content">
                     <source src="./img/video.mp4" type="video/mp4">
@@ -213,12 +236,13 @@
             <div class="row">
                 <div class="story">
                     <figure class="story__shape u-text-center">
-                        <img src="./img/hero-small.jpg" alt="Laziz" >
+                        <img src="./img/hero-small.jpg" alt="Laziz">
                         <figcaption class="story__caption">just.ibrohim</figcaption>
                     </figure>
                     <h3 class="title mb-sm">Lorem ipsum dolor sit amet consectetur</h3>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum ut voluptate, hic suscipit excepturi ducimus accusamus dignissimos delectus, magni, id cumque reprehenderit.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum ut voluptate, hic suscipit
+                        excepturi ducimus accusamus dignissimos delectus, magni, id cumque reprehenderit.
                     </p>
                 </div>
             </div>
@@ -226,19 +250,103 @@
             <div class="row">
                 <div class="story">
                     <figure class="story__shape u-text-center">
-                        <img src="./img/nat-10.jpg" alt="Laziz" >
+                        <img src="./img/nat-10.jpg" alt="Laziz">
                         <figcaption class="story__caption">Muslim.bro</figcaption>
                     </figure>
                     <h3 class="title mb-sm">Lorem ipsum dolor sit amet consectetur</h3>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum ut voluptate, hic suscipit excepturi ducimus accusamus dignissimos delectus, magni, id cumque reprehenderit.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum ut voluptate, hic suscipit
+                        excepturi ducimus accusamus dignissimos delectus, magni, id cumque reprehenderit.
                     </p>
                 </div>
             </div>
 
             <div class="u-text-center"><a href="" class="btn-text">Read more</a></div>
         </section>
+
+        <section class="section-contact">
+            <div class="row">
+                <div class="contact">
+                    <div class="contact__form">
+
+                        <form onsubmit="(e) => e.preventDefault(e)" action="mailto:dev.iProger@gmail.com" method="POST"
+                            enctype="multipart/form-data" name="EmailForm" class="form">
+
+                            <div class="mb-lg">
+                                <h2 class="heading-secondary">Contact With Me</h2>
+                            </div>
+
+                            <div class="form__group">
+                                <input type="text" class="form__input" placeholder="Your name" id="name" name="name"
+                                    required>
+                                <label for="name" class="form__label">Your Name</label>
+                            </div>
+                            <div class="form__group">
+                                <input type="Email" class="form__input" placeholder="Your Email" id="email" name="email"
+                                    required>
+                                <label for="email" class="form__label">Your Email</label>
+                            </div>
+                            <div class="form__group mb-lg">
+                                <div class="form__radio-group">
+                                    <input type="radio" name="client" id="client" class="form__radio-input">
+                                    <label for="client" class="form__radio-label">
+                                        <span class="form__radio-btn"></span>
+                                        Human
+                                    </label>
+                                </div>
+                                <div class="form__radio-group">
+                                    <input type="radio" name="client" id="dev" class="form__radio-input">
+                                    <label for="dev" class="form__radio-label">
+                                        <span class="form__radio-btn"></span>
+                                        Developer
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="form__group">
+                                <button class="btn btn--green btn--animated">Send</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
+
+    <footer class="footer">
+        <div class="footer__logo-box">
+            <img src="./img/logo-green-1x.png" alt="LazizbekDev" class="footer__logo">
+        </div>
+        <div class="row">
+            <div class="col-1-of-2">
+                <div class="footer__navigation">
+                    <ul class="footer__list">
+                        <li class="footer__item">
+                            <a href="https://lazizbek-dev.netlify.app/" class="footer__link">Portfolio</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="https://t.me/mernme/" class="footer__link">Telegram</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="https://instagram.com/mern.me/" class="footer__link">Instagram</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="https://www.linkedin.com/in/lazizbek-tojiboyev-24185420b/"
+                                class="footer__link">LinkedIn</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-1-of-2">
+                <p class="footer__copyright">
+                    Cloned by <a class="footer__link" href="https://lazizbek-dev.netlify.app/"> LazizbekDev</a> for his
+                    online course ADVANCED CSS AND SASS. Copyright &copy; by Jonas Schmedtmann. You are 100% allowed to
+                    use this webpage for both personal and commercial use, but NOT to claim it as your own design. A
+                    credit to the original author, Jonas Schmedtmann, is of course highly appreciated!
+                </p>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>

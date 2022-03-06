@@ -1,18 +1,23 @@
-.btn:link,
-.btn:visited {
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 1.5rem 4rem;
-    display: inline-block;
-    border-radius: 10rem;
-    transition: all .2s ease;
-    position: relative;
-}
 
 .btn {
+    &,
+    &:link,
+    &:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1.5rem 4rem;
+        display: inline-block;
+        border-radius: 10rem;
+        transition: all .2s ease;
+        position: relative;
+
+        border: none;
+        cursor: pointer;
+    }
     box-sizing: border-box;
 
-    &:hover {
+    &:hover,
+    &:focus {
         transform: translateY(-3px) !important;
         box-shadow: 0 1rem 2rem rgba($black, .2);
     }
@@ -42,6 +47,11 @@
         &::after {
             background-color: $light-white;
         }
+    }
+
+    &--green {
+        background-color: $dark-green;
+        color: $light-white;
     }
 
     &--animated {

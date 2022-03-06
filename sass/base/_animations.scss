@@ -56,3 +56,15 @@
         transform: scale(1.08) rotate(1deg);
     }
 }
+
+@keyframes navItem {
+    0% {
+        left: -100%;
+    }
+    70% {
+        left: 5%;
+    }
+    100% {
+        left: 0;
+    }
+}
