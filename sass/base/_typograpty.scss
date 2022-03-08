@@ -13,6 +13,11 @@
 
         animation-name: toLeft;
         animation-duration: 1s;
+
+        @include respond(phone) {
+            letter-spacing: 1rem;
+            font-size: 3rem;
+        }
     }
 
     &__sub {
@@ -23,6 +28,10 @@
 
         animation-name: toRight;
         animation-duration: 1s;
+
+        @include respond(phone) {
+            letter-spacing: .5rem;
+        }
     }
 }
 
@@ -34,8 +43,6 @@
     display: inline-block;
     background: linear-gradient(to right, $light-green, $dark-green);
     -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -o-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     transition: .2s;
@@ -44,5 +51,12 @@
     &:hover {
         transform: skew(15deg, 2deg) scale(1.1);
         text-shadow: .5rem 1rem 2rem rgba($color: #000000, $alpha: 0.5);
+    }
+
+    @include respond(tablet) {
+        font-size: 2.5rem;
+    }
+    @include respond(phone) {
+        font-size: 2rem;
     }
 }

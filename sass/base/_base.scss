@@ -9,6 +9,16 @@
 html {
     font-size: 62.5%;
     scroll-behavior: smooth;
+    
+    @include respond(laptop) {
+        font-size: 56.25%;
+    }
+    @include respond(tablet) {
+        font-size: 50%;
+    }
+    @include respond(desktop) {
+        font-size: 75%;
+    }
 }
 
 body {
@@ -20,4 +30,8 @@ body {
     padding: 3rem;
 
     box-sizing: border-box;
+
+    @include respond(tablet) {
+        padding: 0;
+    }
 }

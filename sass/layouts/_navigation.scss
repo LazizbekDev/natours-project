@@ -5,12 +5,12 @@
     }
 
     &__btn {
-        width: 6.3rem;
-        height: 6.3rem;
+        width: 7rem;
+        height: 7rem;
         border-radius: 50%;
         position: fixed;
-        top: 6.3rem;
-        right: 6.3rem;
+        top: 6rem;
+        right: 6rem;
         background-color: white;
         z-index: 2000;
         display: grid;
@@ -18,22 +18,40 @@
         user-select: none;
         box-shadow: 0 1rem 3rem rgba($black, .1);
 
+        @include respond(tablet) {
+            top: 4rem;
+            right: 4rem;
+        }
+        @include respond(phone) {
+            top: 3rem;
+            right: 3rem;
+        } 
+
         i {
             font-size: 3rem;
         }
     }
 
     &__background {
-        width: 6rem;
-        height: 6rem;
+        width: 7rem;
+        height: 7rem;
         border-radius: 50%;
         position: fixed;
-        top: 6.5rem;
-        right: 6.5rem;
+        top: 6rem;
+        right: 6rem;
         background-image: radial-gradient($light-green, $dark-green);
         z-index: 1000;
 
         transition: transform .8s cubic-bezier(0.6, -.4, 0.65, 1);
+
+        @include respond(tablet) {
+            top: 4rem;
+            right: 4rem;
+        }
+        @include respond(phone) {
+            top: 3rem;
+            right: 3rem;
+        }
     }
 
     &__navbar {

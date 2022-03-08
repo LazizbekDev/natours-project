@@ -1,23 +1,48 @@
 .row {
     max-width: $grid-width;
     margin: 0 auto;
-    
+
     &:not(:last-child) {
         margin-bottom: $grid-bottom;
+
+        @include respond(tablet) {
+            margin-bottom: $grid-bottom-small;
+        }
+    }
+
+    @include clearfix;
+
+    @include respond(tablet) {
+        max-width: 50rem; 
+        padding: 3rem;
     }
 
     [class^="col-"] {
         float: left;
-        
+
         &:not(:last-child) {
             margin-right: 6rem;
+
+            @include respond(tablet) {
+                margin-bottom: 0;
+                margin-bottom: $grid-bottom-small;
+            }
+        }
+
+        @include respond(tablet) {
+            width: 100% !important;
         }
     }
 
-    .col-1-of-2 {width: calc((100% - 6rem) / 2);}
-    .col-1-of-3 {width: calc((100% - 2 * 6rem) / 3);}
+    .col-1-of-2 {
+        width: calc((100% - 6rem) / 2);
+    }
 
-    .col {
-        display: flex !important;
+    .col-1-of-3 {
+        width: calc((100% - 2 * 6rem) / 3);
+    }
+
+    .col-1-of-4 {
+        width: calc((100% - 3 * 6rem) / 4);
     }
 }

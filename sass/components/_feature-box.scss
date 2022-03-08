@@ -8,6 +8,10 @@
     margin: 0 2rem;
     cursor: pointer;
 
+    @include respond(tablet) {
+        padding: 2rem;
+    }
+
     .icon {
         font-size: 4rem;
         color: $medium-green;

@@ -1,12 +1,20 @@
 .footer {
     background-color: $footerColor;
-    padding: 10rem 0 24rem 0;
+    padding: 10rem 0;
     font-size: 1.4rem;
     color: $color-gray-light-1;
+
+    @include respond(tablet) {
+        padding: 8rem 0;
+    }
 
     &__logo-box {
         text-align: center;
         margin-bottom: 8rem;
+        
+        @include respond(tablet) {
+            margin-bottom: 6rem;
+        }
     }
 
     &__logo {
@@ -30,6 +38,11 @@
         border-top: 1px solid $gray2;
         padding-top: 2rem;
         display: inline-block;
+
+        @include respond(tablet) {
+            width: 100%;
+            text-align: center;
+        }
     }
 
     &__link {
@@ -57,5 +70,10 @@
         padding-top: 2rem;
         width: 80%;
         float: right;
+
+        @include respond(tablet) {
+            width: 100%;
+            float: none;
+        }
     }
 }
